@@ -77,3 +77,10 @@
 - Kadang saat terjadi panic, kita ingin melakukan sesuatu, misal memberitahu jika terjadi kesalahan di web, atau bahkan mengirim informasi log kesalahan yang terjadi
 - Sebelumnya, jika kita ingin menangani panic, maka kita harus membuat Middleware khusus secara manual
 - Namun di Router, hal tersebut sudah disediakan untuk menangani panic, caranya dengan menggunakan attribute PanicHandler : `func(http.ResponseWriter, *http.Request, interface{})`
+
+# Not Found Handler
+
+- Selain panic handler, Router juga memiliki `not found handler`
+- Not found handler adalah handler yang dieksekusi ketika client mencoba melakukan request URL yang memang tidak terdapat di Router
+- Secara default, jika tidak ada route yang tidak ditemukan (artinya route atau URL nya ada), maka Router akan melanjutkan request ke `http.NotFound`, namun kita bisa mengubahnya
+- Caranya dengan mengubah `router.NotFound = http.Handler`
