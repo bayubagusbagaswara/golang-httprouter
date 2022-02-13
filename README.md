@@ -41,3 +41,24 @@
 - ServeMux tidak mendukung hal tersebut. Namun Router mendukung hal tersebut
 - Parameter yang dinamis yang terdapat di URL, secara otomatis `dikumpulkan di Params`
 - Namun, agar Router tahu, kita harus memberi tahu ketika menambahkan Route, dibagian mana kita akan buat URL path nya menjadi dinamis
+
+# Router Pattern
+
+- Sekarang kita sudah tahu bahwa dengan menggunakan Router, kita bisa menambahkan params di URL
+- Sekarang pertanyaannya, bagaimana pattern (pola) pembuatan parameternya?
+
+## Named Parameter
+
+- Named parameter adalah `pola pembuatan parameter dengan menggunakan nama`
+- Setiap nama parameter harus diawali dengan `: (titik dua)`, lalu diikuti dengan `nama parameter`
+- Contoh, jika kita memiliki pattern seperti ini :
+
+  ![Named_Parameter](img/named.jpg)
+
+## Catch All Parameter
+
+- Selain named parameter, ada juga yang bernama catch all parameter, yaitu menangkap semua parameter
+- Catch all parameter harus diawali dengan `* (bintang)`, lalu diikuti dengan nama parameter
+- Catch all parameter harus berada di posisi akhir URL
+
+  ![Catch_All_Parameter](img/catch-all.jpg)
