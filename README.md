@@ -92,3 +92,8 @@
 - Maka akan terjadi error Method Not Allowed
 - Secara `default`, jika terjadi error seperti ini, maka Router akan memanggil function `http.Error`
 - Jika kita ingin mengubahnya, kita bisa gunakan `router.MethodNotAllowed = http.Handler`
+
+# Middleware
+
+- HttpRouter hanyalah library untuk http router saja, tidak ada fitur lain selain router
+- Dan karena Router merupakan implementasi dari http.Handler. Jadi untuk middleware, kita bisa membuat sendiri
