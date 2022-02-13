@@ -62,3 +62,10 @@
 - Catch all parameter harus berada di posisi akhir URL
 
   ![Catch_All_Parameter](img/catch-all.jpg)
+
+# Serve File
+
+- Pada materi Go-Lang Web, kita sudah pernah membahas tentang Serve File
+- Pada Router pun, dia mendukung serve static file menggunakan `function ServeFiles(Path, FileSystem)`
+- Dimana pada Path, kita harus menggunakan `Catch All Parameter`
+- Sedangkan pada FileSystem kita bisa melakukan manual load dari folder atau menggunakan golang embed
